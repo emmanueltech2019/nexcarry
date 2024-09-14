@@ -1,0 +1,158 @@
+/*** 
+
+====================================================================
+		Call To Action
+====================================================================
+
+***/
+
+.call-to-action{
+    position: relative;
+    padding: 200px 0 120px;
+    @include background;
+    z-index: 2;
+    &:before{
+        @include overlay;
+        background-color: var(--bg-theme-color1);
+        opacity: .5;
+        content: "";
+        pointer-events: none;
+    }
+    &:after{
+        position: absolute;
+        left: 50%;
+        top: 0;
+        height: 100%;
+        width: 50%;
+        margin-left: 30px;
+        background-image: url(../images/icons//shape-3.png);
+        background-repeat: no-repeat;
+        background-position: top left;
+        background-size: cover;
+        opacity: .3;
+        pointer-events: none;
+        content: "";
+    }
+    .outer-box {
+        position: relative;
+        padding-left: 270px;
+        .sec-title .sub-title {
+            margin-bottom: 15px;
+        }
+        .play-now {
+            position: absolute;
+            left: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            display: inline-block;
+
+            &:before {
+                position: absolute;
+                left: 100%;
+                top: 100%;
+                height: 62px;
+                width: 110px;
+                margin-left: 10px;
+                background-image: url(../images/icons/arrow.png);
+                content: "";
+            }
+
+            .icon {
+                height: 120px;
+                width: 120px;
+                background-color: var(--bg-theme-color2);
+                color: #fff;
+                font-size: 34px;
+                @include flex-center;
+                padding-left: 10px;
+            }
+        }
+        .theme-btn {
+            margin-top: 35px;
+        }
+        .highlighted{
+            position: relative;
+            z-index: 2;
+            &:before{
+                position: absolute;
+                left: -10px;
+                top: 0;
+                height: 88px;
+                width: 260px;
+                background-image: url(../images/icons/object-2.png);
+                background-size: 100%;
+                background-repeat: no-repeat;
+                content: "";
+            }
+        }
+    }
+}
+
+
+// Call to Action / Style Two
+.call-to-action.style-two{
+    padding: 120px 0;
+    &:after{
+        display: none;
+    }
+    .outer-box{
+        padding: 0;
+    }
+
+}
+
+
+/*** 
+
+====================================================================
+		Call To Action
+====================================================================
+
+***/
+
+.call-to-action-two{
+    position: relative;
+    padding: 120px 0;
+    z-index: 2;
+    .outer-box{
+        position: relative;
+        @include background;
+        @include flex-between;
+        background-color: var(--bg-theme-color2-light);
+        padding: 57px 60px;
+        padding-left: 90px;
+        overflow: hidden;
+        border-radius: 10px;
+        &:before {
+            @include overlay;
+            background-color: var(--bg-theme-color2-light);
+            opacity: .7;
+            content: "";
+            pointer-events: none;
+        }
+        &:after{
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 140px;
+            height: 220px;
+            background-color: var(--bg-theme-color3-light);
+            border-right: 30px solid #ac0b12;
+            content: "";
+            transform: rotate(-45deg);
+            transform-origin: right bottom;
+        }
+    }
+    .title-box{
+        .title{
+            font-size: 36px;
+            line-height: 1.2em;
+            color: #fff;
+            font-weight: 700;
+        }
+    }
+    .btn-box {
+        position: relative;
+        z-index: 8;
+    }
+}

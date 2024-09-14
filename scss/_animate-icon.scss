@@ -1,0 +1,150 @@
+
+/*** 
+
+====================================================================
+  Anim Icons
+====================================================================
+
+***/
+
+.anim-icons {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    max-width: 1170px;
+    margin: 0 auto;
+}
+
+.anim-icons.full-width {
+    max-width: 100%;
+}
+
+.anim-icons .icon {
+    position: absolute;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+.icon-dots-1{
+    height: 204px;
+    width: 209px;
+    background-image: url(../images/icons/icon-dot-1.png);
+}
+
+.icon-dotted-map {
+    width: 474px;
+    height: 357px;
+    background-image: url(../images/icons/dotted-map.png);
+}
+
+.icon-dotted-map-2{
+    width: 987px;
+    height: 478px;
+    background-image: url(../images/icons/dotted-map-2.png);
+}
+
+.icon-bg-dots{
+    width: 916px;
+    height: 709px;
+    background-image: url(../images/icons/icon-bg-dots.png);
+}
+
+.icon-plane-1 {
+    width: 104px;
+    height: 640px;
+    background-image: url(../images/icons/icon-plane-1.png);
+}
+
+.icon-plane-2{
+    width: 301px;
+    height: 336px;
+    background-image: url(../images/icons/icon-plane-2.png);
+}
+
+.icon-plane-3 {
+    width: 373px;
+    height: 194px;
+    background-image: url(../images/icons/icon-plane-3.png);
+}
+
+
+.icon-wave-line{
+    width: 653px;
+    height: 471px;
+    background-image: url(../images/icons/icon-wave-line.png);
+}
+
+.icon-quote{
+    height: 46px;
+    width: 64px;
+    background-image: url(../images/icons/icon-quote.png);
+}
+
+
+.bounce-y{
+    animation: bounce-y 10s infinite linear;
+}
+
+.bounce-x{
+    animation: bounce-x 10s infinite linear;
+}
+
+.zoom-one{
+    animation: zoom-one 10s infinite linear;
+}
+
+@keyframes float{
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes bounce-y {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-30px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes bounce-x {
+    0% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(30px);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes zoom-one {
+    0% {
+        transform: scale(.95);
+    }
+
+    50% {
+        transform: scale(1.05);
+    }
+
+    100% {
+        transform: scale(.95);
+    }
+}

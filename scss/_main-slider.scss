@@ -1,0 +1,92 @@
+/*** 
+
+====================================================================
+  Main Slider
+====================================================================
+
+***/
+
+.main-slider {
+  position: relative;
+  &:before {
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    background-image: url(../images/main-slider/bottom-shape.png);
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: cover;
+    height: 190px;
+    width: 100%;
+    content: "";
+    z-index: 8;
+  }
+}
+
+.main-slider {
+  .title {
+    position: relative;
+    display: inline-block;
+    font-size: 20px;
+    line-height: 30px;
+    color: #ffffff;
+    padding-top: 15px;
+    &:before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      height: 5px;
+      width: 100%;
+      background-color: var(--bg-theme-color2);
+      border-radius: 5px;
+    }
+  }
+  h2 {
+    position: relative;
+    display: block;
+    font-size: 80px;
+    line-height: 1.2em;
+    color: #ffffff;
+    font-weight: 700;
+    letter-spacing: -0.05em;
+    text-transform: capitalize;
+  }
+  .btn-box {
+    position: relative;
+  }
+  .theme-btn {
+    display: inline-block;
+    white-space: nowrap;
+    min-width: 200px !important;
+  }
+}
+
+.float-icon {
+  position: relative;
+  height: 100px;
+  width: 100px;
+  @include flex-center;
+  color: #ffffff;
+  &:before {
+    position: relative;
+    z-index: 1;
+    font-size: 64px;
+  }
+  &:after {
+    @include overlay;
+    background-color: var(--bg-theme-color1);
+    opacity: 0.5;
+    content: "";
+    border-radius: 5px;
+  }
+}
+
+.tp-dottedoverlay {
+  background-color: var(--bg-theme-color1);
+  opacity: 0.5;
+}
+
+.tp-bannertimer {
+  display: none;
+}

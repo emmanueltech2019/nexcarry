@@ -1,0 +1,255 @@
+/*** 
+
+====================================================================
+    Testimonial Section
+====================================================================
+
+***/
+
+.testimonial-section{
+    position: relative;
+    padding: 120px 0;
+    .icon-bg-dots{
+        right: 0;
+        left: auto;
+        margin-right:-370px;
+        margin-top: -190px;
+    }
+    .icon-plane-2{
+        bottom: 50px;
+        left:-350px;
+    }
+    .outer-box {
+        position: relative;
+        margin: 0 -15px;
+        z-index: 9;
+    }
+}
+
+
+.testimonial-block {
+    position: relative;
+    padding: 20px 15px 0;
+    .inner-box {
+        position: relative;
+        text-align: center;
+        &:hover .content-box {
+            background-color: var(--bg-theme-color1);
+            &:before {
+                border-top: 20px solid var(--border-theme-color1);
+            }
+            .text {
+                color: #9898a0;
+            }
+        }
+        &:hover .thumb img {
+            border: 2px solid var(--border-theme-color2);
+        }
+    }
+    .content-box {
+        position: relative;
+        padding: 0px 40px 40px;
+        box-shadow: 0 3px 15px rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+        margin-bottom: 40px;
+        transition: all 300ms ease;
+        &::before {
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: -20px;
+            margin: 0 auto;
+            width: 40px;
+            border-left: 20px solid transparent;
+            border-right: 20px solid transparent;
+            border-top: 20px solid #fff;
+            transition: all 300ms ease;
+            filter: drop-shadow(0 10px 10px rgba(0, 0, 0, 0.1));
+            content: "";
+        }
+        .rating {
+            position: relative;
+            transform: translateY(-20px);
+            display: inline-block;
+            padding: 10px 70px;
+            height: 40px;
+            font-size: 14px;
+            letter-spacing: 1px;
+            line-height: 20px;
+            color: #fff;
+            background-color: var(--bg-theme-color2);
+            border-radius: 5px;
+        }
+        .text {
+            position: relative;
+            font-size: 16px;
+            line-height: 30px;
+            color: #767676;
+            transition: all 300ms ease;
+        }
+    }
+    .thumb {
+        display: block;
+        height: 75px;
+        width: 75px;
+        margin: 0 auto 5px;
+        border-radius: 50%;
+
+        img {
+            border-radius: 50%;
+            border: 2px solid transparent;
+            transition: all 300ms ease;
+        }
+    }
+    .designation {
+        position: relative;
+        display: block;
+        font-size: 12px;
+        line-height: 20px;
+        color: #767676;
+        text-transform: uppercase;
+        font-weight: 500;
+    }
+    .name {
+        position: relative;
+        display: block;
+        font-size: 22px;
+        font-weight: 700;
+        color: var(--theme-color2);
+        line-height: 30px;
+    }
+}
+
+/*** 
+
+====================================================================
+    Testimonial Section Two
+====================================================================
+
+***/
+
+.testimonial-section-two{
+    position: relative;
+    padding: 120px 0 70px;
+    .icon-plane-1{
+        top: -70px;
+        right: -180px;
+        width: 162px;
+        height: 975px;
+    }
+    .float-image{
+        z-index: 8;
+        right:-360px;
+        bottom: 0;
+    }
+    .bg-image{
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 65%;
+        height: 100%;
+        background-repeat: no-repeat;
+        background-position: center left;
+        background-size: cover;
+        border-radius: 0 10px 10px 0;
+        &::before{
+            @include overlay;
+            background-color: #f8f5f1;
+            border-radius: 0 10px 10px 0;
+            opacity: .9;
+            content: "";
+        }
+        &:after{
+            position: absolute;
+            right: -40px;
+            top:0;
+            height: 90px;
+            width: 10px;
+            background-color: #eee9e3;
+            content: "";
+            border-radius: 5px;
+        }
+    }
+    .testimonial-column{
+        margin-bottom: 50px;
+        .inner-column{
+            position: relative;
+            padding-right: 30px;
+        }
+        .sec-title{
+            margin-bottom: 35px;
+        }
+    }
+
+    .form-column{
+        position: relative;
+        margin-bottom: 50px;
+    }
+
+}
+
+
+.testimonial-block-two{
+    position: relative;
+    .inner-box {
+        position: relative;
+    }
+    .icon{
+        display: block;
+        margin-bottom: 40px;
+    }
+    .text {
+        position: relative;
+        font-size: 30px;
+        line-height: 50px;
+        color: #767676;
+    }
+    .info-box{
+        position: relative;
+        padding-left: 120px;
+        min-height: 90px;
+        margin-top: 90px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        .thumb {
+            position: absolute;
+            left:0;
+            top: 0;
+            display: block;
+            height: 90px;
+            width: 90px;
+            border-radius: 50%;
+            img {
+                border-radius: 50%;
+                border: 2px solid var(--border-theme-color2);
+                transition: all 300ms ease;
+            }
+        }
+        .name {
+            color: var(--theme-color1);
+            margin-top: 0;
+            margin-bottom: 5px;
+        }
+        .designation {
+            position: relative;
+            display: block;
+            font-size: 14px;
+            line-height: 20px;
+            color: var(--theme-color2);
+            text-transform: uppercase;
+            font-weight: 700;
+            letter-spacing: .1em;
+        }
+    }
+}
+
+.testimonial-carousel-two{
+    .owl-dots{
+        position: absolute;
+        right: 0;
+        bottom: 40px;
+        margin: 0;
+    }
+
+}

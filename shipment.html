@@ -15,9 +15,13 @@
 <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
 <link rel="icon" href="images/favicon.png" type="image/x-icon">
 
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.18/dist/sweetalert2.min.css">
+
+
 <!-- Responsive -->
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+
 <!--[if lt IE 9]><script src="js/html5shiv.js"></script><![endif]-->
 <!--[if lt IE 9]><script src="js/respond.js"></script><![endif]-->
 </head>
@@ -235,147 +239,150 @@ TX 78758</li>
 	  <div class="section-content">
 		<form id="checkout-form" action="#">
 		  <div class="row mt-30">
+			
 			<div class="col-md-6">
-			  <div class="billing-details">
-				<h3 class="mb-30">Billing Details</h3>
-				<div class="row">
-				  <div class="mb-3 col-md-6">
-					<label for="checkuot-form-fname">First Name</label>
-					<input id="checkuot-form-fname" type="email" class="form-control" placeholder="First Name">
-				  </div>
-				  <div class="mb-3 col-md-6">
-					<label for="checkuot-form-lname">Last Name</label>
-					<input id="checkuot-form-lname" type="email" class="form-control" placeholder="Last Name">
-				  </div>
-				  <div class="col-md-12">
-					<div class="mb-3">
-					  <label for="checkuot-form-cname">Company Name</label>
-					  <input id="checkuot-form-cname" type="email" class="form-control" placeholder="Company Name">
-					</div>
-					<div class="mb-3">
-					  <label for="checkuot-form-email">Email Address</label>
-					  <input id="checkuot-form-email" type="email" class="form-control" placeholder="Email Address">
-					</div>
-					<div class="mb-3">
-					  <label for="checkuot-form-address">Address</label>
-					  <input id="checkuot-form-address" type="email" class="form-control" placeholder="Street address">
-					</div>
-					<div class="mb-3">
-					  <input type="email" class="form-control" placeholder="Apartment, suite, unit etc. (optional)">
-					</div>
-				  </div>
-				  <div class="mb-3 col-md-6">
-					<label for="checkuot-form-city">City</label>
-					<input id="checkuot-form-city" type="email" class="form-control" placeholder="City">
-				  </div>
-				  <div class="mb-3 col-md-6">
-					<label>State/Province</label>
-					<select class="form-control">
-					  <option>Select Country</option>
-					  <option>UK</option>
-					  <option>USA</option>
-					</select>
-				  </div>
-				  <div class="mb-3 col-md-6">
-					<label for="checkuot-form-zip">Zip/Postal Code</label>
-					<input id="checkuot-form-zip" type="email" class="form-control" placeholder="Zip/Postal Code">
-				  </div>
-				  <div class="mb-3 col-md-6">
-					<label>Country</label>
-					<select class="form-control">
-					  <option>Select Country</option>
-					  <option>UK</option>
-					  <option>USA</option>
-					</select>
-				  </div>
-				</div>
-			  </div>
-			</div>
-			<div class="col-md-6">
+
+
+
 			  <h3>Additional information</h3>
-			  <label for="order_comments" class="">Order notes&nbsp;<span class="optional">(optional)</span></label>
-			  <textarea id="order_comments" class="form-control" placeholder="Notes about your order, e.g. special notes for delivery." rows="3"></textarea>
+
+
+			  <div class="contact-form wow fadeInLeft">
+				<!--Contact Form-->
+					<div class="row">
+						<div class="col-lg-12 col-md-12 col-sm-12 form-group">
+							<label>Your Name:</label>
+							<input type="text" name="full_name" placeholder="" required />
+						</div>
+
+						<div class="col-lg-6 col-md-6 col-sm-12 form-group">
+							<label>Your Email:</label>
+							<input type="email" name="Email" placeholder="" required />
+						</div>
+
+						<div class="col-lg-6 col-md-6 col-sm-12 form-group">
+							<label>Phone No::</label>
+							<input type="text" name="Phone" placeholder="" required />
+						</div>
+
+						<div class="col-lg-12 col-md-12 col-sm-12 form-group">
+							<label>DIST (Miles):</label>
+							<div class="range-slider-one">
+								<input type="text" class="range-amount" name="distance" readonly />
+								<div class="distance-range-slider"></div>
+							</div>
+						</div>
+
+						<div class="col-lg-6 col-md-6 col-sm-12 form-group">
+							<label>Freight type:</label>
+							<select class="custom-select" required name="freightType">
+								<option value="">Select</option>
+								<option value="Air Freight">Air Freight</option>
+								<option value="Ocean Freight">Ocean Freight</option>
+								<option value="Rail transport">Rail transport</option>
+								<option value="Cargo ship">Cargo ship</option>
+								<option value="Bulk cargo">Bulk cargo</option>
+							</select>
+						</div>
+
+						<div class="col-lg-6 col-md-6 col-sm-12 form-group">
+							<label>Load:</label>
+							<select class="custom-select" name="load" required>
+								<option value="">Select</option>
+								<option value="Door to Door">Door to Door</option>
+								<option value="International shipping">International shipping</option>
+								<option value="Multi Modal">Multi Modal</option>
+							</select>
+						</div>
+
+						<!-- <div class="col-lg-12 col-md-12 col-sm-12 form-group">
+							<button class="theme-btn btn-style-two hvr-light" type="submit" name="submit-form"><span class="btn-title">Submit Request</span></button>
+						</div> -->
+					</div>
 			</div>
-			<a href="shipment.html" class="theme-btn btn-style-one alternate"><span class="btn-title">Send for shipment</span></a>
+			
+			</div>
+			<div class="col-md-6">
+				<div class="billing-details">
+				  <h3 class="mb-30">Pickup Address</h3>
+				  <div class="row">
+					
+					<div class="col-md-12">
+					  
+					  
+					  <div class="mb-3">
+						<label for="checkuot-formAddress">Address</label>
+						<input  type="text" required name="fromAddress" class="form-control" placeholder="Street address">
+					  </div>
+					 
+					</div>
+					<div class="mb-3 col-md-6">
+					  <label for="checkuot-form-city">City</label>
+					  <input  type="text" required name="fromCity" class="form-control" placeholder="City">
+					</div>
+					<div class="mb-3 col-md-6">
+					  <label>State/Province</label>
+					  <input  type="text" required name="fromState" class="form-control" placeholder="State/Province">
 
+					 
+					</div>
+					<div class="mb-3 col-md-6">
+					  <label for="checkuot-form-zip">Zip/Postal Code</label>
+					  <input  type="text" required name="fromZip" class="form-control" placeholder="Zip/Postal Code">
+					</div>
+					<div class="mb-3 col-md-6">
+					  <label>Country</label>
+					  <input  type="text" required name="fromCountry" class="form-control" placeholder="Country">
 
-			<!-- <div class="col-md-12 mt-60">
-				<div class="payment-method">
-					<h3>Choose a Payment Method</h3>
-					<ul class="accordion-box">
-						<li class="accordion block active-block">
-							<div class="acc-btn active">
-								<div class="icon-outer"><i class="lnr-icon-chevron-down"></i></div>
-								Credir Card / Debit Card
-							</div>
-							<div class="acc-content current">
-								<div class="payment-info">
-									<div class="row clearfix">
-										<div class="col-lg-6 col-md-6 col-sm-12 column">
-											<div class="field-input mb-3">
-												<input type="text" class="form-control" name="name" placeholder="Name on the Card" required="">
-											</div>
-										</div>
-										<div class="col-lg-6 col-md-6 col-sm-12 column">
-											<div class="field-input mb-3">
-												<input type="text" class="form-control" name="number" placeholder="Card Number" required="">
-											</div>
-										</div>
-										<div class="col-lg-3 col-md-6 col-sm-12 column">
-											<div class="field-input mb-3">
-												<input type="text" class="form-control" name="date" placeholder="Expiry Date" required="">
-											</div>
-										</div>
-										<div class="col-lg-3 col-md-6 col-sm-12 column">
-											<div class="field-input mb-3">
-												<input type="text" class="form-control" name="code" placeholder="Security Code" required="">
-											</div>
-										</div>
-										<div class="col-lg-6 col-md-12 col-sm-12 column">
-											<div class="field-input message-btn">
-												<button type="submit" class="theme-btn btn-style-one" data-loading-text="Please wait..."><span class="btn-title">Make Payment</span></button>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</li>
-						<li class="accordion block">
-							<div class="acc-btn">
-								<div class="icon-outer"><i class="lnr-icon-chevron-down"></i></div>
-								Direct Bank Transfer
-							</div>
-							<div class="acc-content">
-								<div class="payment-info">
-									<p class="mb-0">Make your payment directly into our bank account. Please use your Order ID as the payment reference. Your order won’t be shipped until the funds have cleared in our account.</p>
-								</div>
-							</div>
-						</li>
-						<li class="accordion block">
-							 <div class="acc-btn">
-								<div class="icon-outer"><i class="lnr-icon-chevron-down"></i></div>
-								Cheque Payment
-							</div>
-							<div class="acc-content">
-								<div class="payment-info">
-									<p class="mb-0">Make your payment directly into our bank account. Please use your Order ID as the payment reference. Your order won’t be shipped until the funds have cleared in our account.</p>
-								</div>
-							</div>
-						</li>
-						<li class="accordion block">
-							 <div class="acc-btn">
-								<div class="icon-outer"><i class="lnr-icon-chevron-down"></i></div>
-								Other Payment
-							</div>
-							<div class="acc-content">
-								<div class="payment-info">
-									<p class="mb-0">Make your payment directly into our bank account. Please use your Order ID as the payment reference. Your order won’t be shipped until the funds have cleared in our account.</p>
-								</div>
-							</div>
-						</li>
-					</ul>
+					 
+					</div>
+					
+				  </div>
 				</div>
-			</div> -->
+				
+			  </div>
+			  <div class="col-md-6"></div>
+
+				<div class="billing-details">
+					<h3 class="mb-30">Delivery Address</h3>
+					<div class="row">
+					  						
+						<div class="col-md-12">
+					  
+					  
+							<div class="mb-3">
+							  <label for="checkuot-form-address">Address</label>
+							  <input required type="text" name="toAddress" class="form-control" placeholder="Street address">
+							</div>
+						   
+						  </div>
+						  <div class="mb-3 col-md-6">	
+							<label for="checkuot-form-city">City</label>
+							<input  required type="text" name="toCity" class="form-control" placeholder="City">
+						  </div>
+						  <div class="mb-3 col-md-6">
+							<label>State/Province</label>
+							<input  required type="text" name="toState" class="form-control" placeholder="State/Province">
+
+							
+						  </div>
+						  <div class="mb-3 col-md-6">
+							<label for="checkuot-form-zip">Zip/Postal Code</label>
+							<input  type="text" name="toZip" class="form-control" placeholder="Zip/Postal Code">
+						  </div>
+						  <div class="mb-3 col-md-6">
+							<label>Country</label>
+							<input  type="text" name="toCountry" class="form-control" placeholder="Country">
+
+							
+						  </div>
+						  
+					  
+				
+					</div>
+				  </div>
+			  </div>
+			<button type="submit" class="theme-btn btn-style-one alternate"><span class="btn-title">Send for shipment</span></button>
 		  </div>
 		</form>
 	  </div>
@@ -429,56 +436,7 @@ TX 78758</div>
 			</div>
 			<!-- End Contact info -->
 
-			<!--Widgets Section-->
-			<div class="widgets-section">
-				<div class="auto-container">
-					<div class="row">
-						<!--Footer Column-->
-						<div class="footer-column col-xl-4 col-lg-12 col-md-6 col-sm-12">
-							<div class="footer-widget about-widget">
-								<div class="logo">
-									<a href="index.html"><img src="images/nexcarry-logo-2.png" alt="" /></a>
-								</div>
-							</div>
-						</div>
 
-						<!--Footer Column-->
-						<div class="footer-column col-xl-4 col-lg-3 col-md-6 col-sm-12">
-							<div class="footer-widget">
-								<h3 class="widget-title">Service</h3>
-								<ul class="user-links">
-									<li><a href="#">Reliability & Punctuality</a></li>
-									<li><a href="#">Trusted Franchise</a></li>
-									<li><a href="#">Warehoues Storage</a></li>
-									<li><a href="#">Real Time Tracking</a></li>
-									<li><a href="#">Transparent Pricing</a></li>
-								</ul>
-							</div>
-						</div>
-
-						
-						<!--Footer Column-->
-						<div class="footer-column col-xl-4 col-lg-5 col-md-6 col-sm-12">
-							<div class="footer-widget">
-								<h3 class="widget-title">Newsletter</h3>
-								<div class="widget-content">
-									<div class="subscribe-form">
-										<div class="text">Subscribe our newsletter to get our latest update & news</div>
-										<form method="post" action="#">
-											<div class="form-group">
-												<input type="email" name="email" class="email" value="" placeholder="Email Address" required="" />
-												<button type="button" class="theme-btn btn-style-one">
-													<span class="btn-title"><i class="fa fa-paper-plane"></i></span>
-												</button>
-											</div>
-										</form>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
 
 			<!--Footer Bottom-->
 			<div class="footer-bottom">
@@ -528,5 +486,9 @@ TX 78758</div>
 <script src="js/swiper.min.js"></script>
 <script src="js/owl.js"></script>
 <script src="js/script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.18/dist/sweetalert2.all.min.js"></script>
+<script src="./js/auth.js"></script>
+
 </body>
 </html>

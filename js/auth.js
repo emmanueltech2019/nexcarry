@@ -1,5 +1,5 @@
-// axios.defaults.baseURL='https://api.nexcarry.com/api/v1/';
-axios.defaults.baseURL = "http://localhost:5001/api/v1/";
+axios.defaults.baseURL='https://api.nexcarry.com/api/v1/';
+// axios.defaults.baseURL = "http://localhost:5001/api/v1/";
 
 const Toast = Swal.mixin({
     toast: true,
